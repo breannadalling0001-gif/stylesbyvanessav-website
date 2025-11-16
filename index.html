@@ -161,6 +161,82 @@
       text-decoration-thickness: 1px;
     }
 
+    /* CAROUSEL */
+
+    .carousel {
+      position: relative;
+      max-width: 620px;
+      margin: 0 auto 2.5rem;
+      overflow: hidden;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.4s ease;
+    }
+
+    .slide {
+      min-width: 100%;
+      padding: 0.75rem 0.75rem 1rem;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+    }
+
+    .carousel-nav {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+
+    .carousel-button {
+      pointer-events: auto;
+      background: rgba(0, 0, 0, 0.65);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 0.4rem;
+      padding-bottom: 0.6rem;
+      margin-top: 0.2rem;
+    }
+
+    .carousel-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 0, 0, 0.4);
+      background: transparent;
+    }
+
+    .carousel-dot.active {
+      background: #111;
+      border-color: #111;
+    }
+
     footer {
       font-size: 0.75rem;
       color: #777;
@@ -250,9 +326,38 @@
       </p>
     </section>
 
+    <!-- GALLERY / CAROUSEL -->
+    <section class="section" id="gallery" style="text-align:center;">
+      <h2 class="section-title">Gallery</h2>
+      <p class="section-sub">
+        A peek at some recent styles. More photos coming soon.
+      </p>
+
+      <div class="carousel" id="galleryCarousel">
+        <div class="carousel-track">
+          <div class="slide">
+            <img src="IMG_8361.png" alt="Braided style 1" />
+          </div>
+          <div class="slide">
+            <img src="IMG_8362.png" alt="Braided style 2" />
+          </div>
+        </div>
+
+        <div class="carousel-nav">
+          <button class="carousel-button" data-dir="prev">&#8249;</button>
+          <button class="carousel-button" data-dir="next">&#8250;</button>
+        </div>
+
+        <div class="carousel-dots">
+          <div class="carousel-dot active" data-index="0"></div>
+          <div class="carousel-dot" data-index="1"></div>
+        </div>
+      </div>
+    </section>
+
     <!-- BOOKING & POLICIES -->
     <section class="section" id="booking">
-      <h2 class="section-title">Booking & Policies</h2>
+      <h2 class="section-title">Booking &amp; Policies</h2>
       <p class="section-sub">
         Booking is done through Instagram DMs. Please read before requesting
         an appointment.
@@ -282,7 +387,7 @@
       </p>
 
       <p class="contact-row">
-        <strong>Email:</strong> sharonrose3215@gmail.com
+        <strong>Email:</strong> yourauntemail@example.com
         <!-- replace with her real email if she wants -->
       </p>
     </section>
@@ -293,7 +398,50 @@
   </div>
 
   <script>
+    // Set year in footer
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Simple carousel logic
+    const carousel = document.getElementById("galleryCarousel");
+    const track = carousel.querySelector(".carousel-track");
+    const slides = Array.from(track.children);
+    const prevBtn = carousel.querySelector('button[data-dir="prev"]');
+    const nextBtn = carousel.querySelector('button[data-dir="next"]');
+    const dots = Array.from(carousel.querySelectorAll(".carousel-dot"));
+
+    let currentIndex = 0;
+
+    function updateCarousel(index) {
+      const slideWidth = slides[0].getBoundingClientRect().width;
+      track.style.transform = `translateX(-${slideWidth * index}px)`;
+      currentIndex = index;
+
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === currentIndex);
+      });
+    }
+
+    prevBtn.addEventListener("click", () => {
+      const newIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateCarousel(newIndex);
+    });
+
+    nextBtn.addEventListener("click", () => {
+      const newIndex = (currentIndex + 1) % slides.length;
+      updateCarousel(newIndex);
+    });
+
+    dots.forEach(dot => {
+      dot.addEventListener("click", () => {
+        const index = Number(dot.getAttribute("data-index"));
+        updateCarousel(index);
+      });
+    });
+
+    // handle resize so slide width stays correct
+    window.addEventListener("resize", () => {
+      updateCarousel(currentIndex);
+    });
   </script>
 </body>
 </html>
