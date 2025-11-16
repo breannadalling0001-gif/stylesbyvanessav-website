@@ -2,16 +2,59 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="google-site-verification" content="dauWeYf8ZVioHuGxzQ6HgFmeoqHJOwJ3okewjiiHcQQ" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Basic SEO -->
-  <meta name="description" content="StylesByVanessaV offers braids, locs, natural hair and crochet styles with clean parts and long-lasting protective styling. Book your next style via Instagram." />
-  <meta name="keywords" content="StylesByVanessaV, braids, knotless braids, box braids, stitch braids, crochet braids, faux locs, loc retwist, natural hair styles, protective styles, hair stylist" />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://breannadalling0001-gif.github.io/stylesbyvanessav-website/" />
+  <!-- Google Verification -->
+  <meta name="google-site-verification" content="dauWeYf8ZVioHuGxzQ6HgFmeoqHJOwJ3okewjiiHcQQ">
 
-  <title>StylesByVanessaV | Braids, Locs & Protective Styles</title>
+  <!-- SEO Description -->
+  <meta name="description" content="StylesByVanessaV specializes in braids, locs, natural hair, and crochet styles. Clean parts, long-lasting protective styles, and professional service in Bridgeport CT, Queens NY, Valley Stream and surrounding areas.">
+
+  <!-- SEO Keywords -->
+  <meta name="keywords" content="StylesByVanessaV, braids Bridgeport, braider Bridgeport, braider Queens, braider Valley Stream, natural hair stylist, crochet styles, knotless braids, loc retwist, protective styles, CT braider, NYC braider">
+
+  <!-- Mobile Friendly -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>StylesByVanessaV – Braids, Locs & Natural Hair (CT & NYC)</title>
+
+  <!-- Business Schema (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "StylesByVanessaV",
+    "url": "https://breannadalling0001-gif.github.io/stylesbyvanessav-website/",
+    "logo": "https://breannadalling0001-gif.github.io/stylesbyvanessav-website/F25DED8F-328C-43CE-A96B-E747DD95E1AD.png",
+    "image": "https://breannadalling0001-gif.github.io/stylesbyvanessav-website/F25DED8F-328C-43CE-A96B-E747DD95E1AD.png",
+    "description": "Professional braider and natural hair stylist specializing in knotless braids, locs, crochet styles, and protective styling. Clean parts, long-lasting results. Serving Bridgeport CT and surrounding areas, plus Queens and Valley Stream in NYC.",
+    "sameAs": [
+      "https://www.instagram.com/stylesbyvanessav/"
+    ],
+    "areaServed": [
+      { "@type": "City", "name": "Bridgeport" },
+      { "@type": "City", "name": "Stratford" },
+      { "@type": "City", "name": "Fairfield" },
+      { "@type": "City", "name": "Trumbull" },
+      { "@type": "City", "name": "Norwalk" },
+      { "@type": "City", "name": "Stamford" },
+
+      { "@type": "City", "name": "Queens" },
+      { "@type": "City", "name": "Valley Stream" },
+      { "@type": "City", "name": "Jamaica" },
+      { "@type": "City", "name": "Laurelton" },
+      { "@type": "City", "name": "Rosedale" }
+    ],
+    "serviceType": [
+      "Knotless Braids",
+      "Box Braids",
+      "Loc Retwist",
+      "Natural Hair Styling",
+      "Crochet Styles",
+      "Protective Styles"
+    ]
+  }
+  </script>
+
   <style>
     :root {
       --bg: #f9f4ec;
@@ -196,80 +239,67 @@
       transition: transform 0.4s ease;
     }
 
-  .slide {
-  min-width: 100%;
-  padding: 0.75rem;
-  display: flex;               /* NEW */
-  justify-content: center;     /* NEW */
-  align-items: center;         /* NEW */
-}
-/* Bigger gallery images */
-/* Show full gallery images without cropping */
-.slide img {
-  width: auto;
-  height: auto;          /* let height adjust naturally */
-  max-height: 450px;     /* safety limit so it’s not huge */
-  border-radius: 12px;
-  display: block;
-}
+    .slide {
+      min-width: 100%;
+      padding: 0.75rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-.carousel-controls {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.4rem 0.75rem 0.65rem;
-  font-size: 0.78rem;
-}
+    /* show full images, centered */
+    .slide img {
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      max-height: 450px;
+      border-radius: 12px;
+      display: block;
+    }
 
-.dots {
-  display: flex;
-  gap: 0.35rem;
-  align-items: center;
-}
+    .carousel-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.4rem 0.75rem 0.65rem;
+      font-size: 0.78rem;
+    }
 
-.dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  border: 1px solid #444;
-  background: transparent;
-}
+    .dots {
+      display: flex;
+      gap: 0.35rem;
+      align-items: center;
+    }
 
-.dot.active {
-  background: #444;
-}
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      border: 1px solid #444;
+      background: transparent;
+    }
 
-.arrow-btn {
-  border: none;
-  background: none;
-  font-size: 1rem;
-  padding: 0.15rem 0.4rem;
-  cursor: pointer;
-  color: #444;
-}
+    .dot.active {
+      background: #444;
+    }
 
-.arrow-btn:disabled {
-  opacity: 0.3;
-  cursor: default;
-}
+    .arrow-btn {
+      border: none;
+      background: none;
+      font-size: 1rem;
+      padding: 0.15rem 0.4rem;
+      cursor: pointer;
+      color: #444;
+    }
 
-/* Mobile adjustments */
-@media (max-width: 480px) {
-  .slide img {
-    height: 350px;  /* slightly smaller on phones */
-  }
+    .arrow-btn:disabled {
+      opacity: 0.3;
+      cursor: default;
+    }
 
-  .page-wrap {
-    padding: 1.8rem 1.25rem 2.5rem;
-  }
-}
-
-      .hero-logo {
-        max-width: 320px;
-      }
-
-      .slide img {
-        height: 210px;
+    @media (max-width: 480px) {
+      .page-wrap {
+        padding: 1.8rem 1.25rem 2.5rem;
       }
     }
   </style>
@@ -328,6 +358,34 @@
       </div>
     </section>
 
+    <!-- ABOUT VANESSA -->
+    <section class="section" id="about">
+      <h2 class="section-title">About Vanessa</h2>
+      <p class="section-sub" style="max-width: 600px; margin: 0 auto;">
+        Vanessa is a professional braider and natural hair stylist serving
+        clients in both Connecticut and New York. She specializes in clean
+        parts, long-lasting protective styles, knotless braids, loc maintenance,
+        and crochet installs. Every appointment is done with care for your
+        natural hair, edges, and overall comfort.
+      </p>
+    </section>
+
+    <!-- SERVING AREAS -->
+    <section class="section" id="areas">
+      <h2 class="section-title">Serving Areas</h2>
+      <p class="section-sub">
+        Mobile and in-studio appointments in select parts of CT & NYC.
+      </p>
+      <p class="contact-row">
+        <strong>Connecticut:</strong> Bridgeport (main), Stratford, Fairfield, Trumbull,
+        Norwalk, Stamford and nearby cities.
+      </p>
+      <p class="contact-row">
+        <strong>New York:</strong> Queens, Valley Stream, Jamaica, Laurelton, Rosedale and
+        surrounding areas.
+      </p>
+    </section>
+
     <!-- SERVICES -->
     <section class="section" id="services">
       <h2 class="section-title">Services</h2>
@@ -376,7 +434,7 @@
 
     <!-- BOOKING & POLICIES -->
     <section class="section" id="booking">
-      <h2 class="section-title">Booking & Policies</h2>
+      <h2 class="section-title">Booking &amp; Policies</h2>
       <p class="section-sub">
         Booking is done through Instagram DMs. Please read before requesting
         an appointment.
@@ -417,10 +475,10 @@
   </div>
 
   <script>
-    // year
+    // Year in footer
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // simple carousel
+    // Simple carousel
     const track = document.getElementById("carouselTrack");
     const slides = Array.from(track.children);
     const prevBtn = document.getElementById("prevBtn");
