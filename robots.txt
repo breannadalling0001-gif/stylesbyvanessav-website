@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://breannadalling0001-gif.github.io/StylesbyVanessaV/sitemap.xml
