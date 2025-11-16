@@ -161,12 +161,22 @@
       text-decoration-thickness: 1px;
     }
 
-    /* CAROUSEL */
+    footer {
+      font-size: 0.75rem;
+      color: #777;
+      text-align: center;
+      padding-bottom: 1rem;
+    }
+
+    /* GALLERY CAROUSEL */
+
+    .gallery-wrapper {
+      max-width: 420px;
+      margin: 0 auto 0;
+    }
 
     .carousel {
       position: relative;
-      max-width: 620px;
-      margin: 0 auto 2.5rem;
       overflow: hidden;
       border-radius: 16px;
       background: rgba(255, 255, 255, 0.7);
@@ -180,68 +190,55 @@
 
     .slide {
       min-width: 100%;
-      padding: 0.75rem 0.75rem 1rem;
+      padding: 0.75rem;
     }
 
     .slide img {
       width: 100%;
-      height: auto;
-      display: block;
+      height: 240px;
+      object-fit: cover;
       border-radius: 12px;
+      display: block;
     }
 
-    .carousel-nav {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      right: 0;
+    .carousel-controls {
       display: flex;
       justify-content: space-between;
-      transform: translateY(-50%);
-      pointer-events: none;
-    }
-
-    .carousel-button {
-      pointer-events: auto;
-      background: rgba(0, 0, 0, 0.65);
-      color: #fff;
-      border: none;
-      border-radius: 999px;
-      width: 32px;
-      height: 32px;
-      display: flex;
       align-items: center;
-      justify-content: center;
-      font-size: 1.1rem;
-      cursor: pointer;
+      padding: 0.4rem 0.75rem 0.65rem;
+      font-size: 0.78rem;
     }
 
-    .carousel-dots {
+    .dots {
       display: flex;
-      justify-content: center;
-      gap: 0.4rem;
-      padding-bottom: 0.6rem;
-      margin-top: 0.2rem;
+      gap: 0.35rem;
+      align-items: center;
     }
 
-    .carousel-dot {
+    .dot {
       width: 7px;
       height: 7px;
-      border-radius: 999px;
-      border: 1px solid rgba(0, 0, 0, 0.4);
+      border-radius: 50%;
+      border: 1px solid #444;
       background: transparent;
     }
 
-    .carousel-dot.active {
-      background: #111;
-      border-color: #111;
+    .dot.active {
+      background: #444;
     }
 
-    footer {
-      font-size: 0.75rem;
-      color: #777;
-      text-align: center;
-      padding-bottom: 1rem;
+    .arrow-btn {
+      border: none;
+      background: none;
+      font-size: 1rem;
+      padding: 0.15rem 0.4rem;
+      cursor: pointer;
+      color: #444;
+    }
+
+    .arrow-btn:disabled {
+      opacity: 0.3;
+      cursor: default;
     }
 
     @media (max-width: 480px) {
@@ -251,6 +248,10 @@
 
       .hero-logo {
         max-width: 320px;
+      }
+
+      .slide img {
+        height: 210px;
       }
     }
   </style>
@@ -279,6 +280,35 @@
     >
       Book on Instagram
     </a>
+
+    <!-- GALLERY -->
+    <section class="section" id="gallery">
+      <h2 class="section-title">Gallery</h2>
+      <p class="section-sub">
+        A peek at recent work. More styles coming soon.
+      </p>
+
+      <div class="gallery-wrapper">
+        <div class="carousel">
+          <div class="carousel-track" id="carouselTrack">
+            <div class="slide">
+              <img src="IMG_0335.jpeg" alt="Style 1">
+            </div>
+            <div class="slide">
+              <img src="IMG_0336.jpeg" alt="Style 2">
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <button class="arrow-btn" id="prevBtn">&#10094;</button>
+            <div class="dots">
+              <div class="dot active" data-index="0"></div>
+              <div class="dot" data-index="1"></div>
+            </div>
+            <button class="arrow-btn" id="nextBtn">&#10095;</button>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- SERVICES -->
     <section class="section" id="services">
@@ -326,38 +356,9 @@
       </p>
     </section>
 
-    <!-- GALLERY / CAROUSEL -->
-    <section class="section" id="gallery" style="text-align:center;">
-      <h2 class="section-title">Gallery</h2>
-      <p class="section-sub">
-        A peek at some recent styles. More photos coming soon.
-      </p>
-
-      <div class="carousel" id="galleryCarousel">
-        <div class="carousel-track">
-          <div class="slide">
-            <img src="IMG_8361.png" alt="Braided style 1" />
-          </div>
-          <div class="slide">
-            <img src="IMG_8362.png" alt="Braided style 2" />
-          </div>
-        </div>
-
-        <div class="carousel-nav">
-          <button class="carousel-button" data-dir="prev">&#8249;</button>
-          <button class="carousel-button" data-dir="next">&#8250;</button>
-        </div>
-
-        <div class="carousel-dots">
-          <div class="carousel-dot active" data-index="0"></div>
-          <div class="carousel-dot" data-index="1"></div>
-        </div>
-      </div>
-    </section>
-
     <!-- BOOKING & POLICIES -->
     <section class="section" id="booking">
-      <h2 class="section-title">Booking &amp; Policies</h2>
+      <h2 class="section-title">Booking & Policies</h2>
       <p class="section-sub">
         Booking is done through Instagram DMs. Please read before requesting
         an appointment.
@@ -398,49 +399,41 @@
   </div>
 
   <script>
-    // Set year in footer
+    // year
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Simple carousel logic
-    const carousel = document.getElementById("galleryCarousel");
-    const track = carousel.querySelector(".carousel-track");
+    // simple carousel
+    const track = document.getElementById("carouselTrack");
     const slides = Array.from(track.children);
-    const prevBtn = carousel.querySelector('button[data-dir="prev"]');
-    const nextBtn = carousel.querySelector('button[data-dir="next"]');
-    const dots = Array.from(carousel.querySelectorAll(".carousel-dot"));
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const dots = Array.from(document.querySelectorAll(".dot"));
 
     let currentIndex = 0;
 
     function updateCarousel(index) {
-      const slideWidth = slides[0].getBoundingClientRect().width;
-      track.style.transform = `translateX(-${slideWidth * index}px)`;
       currentIndex = index;
-
+      track.style.transform = `translateX(-${index * 100}%)`;
       dots.forEach((dot, i) => {
-        dot.classList.toggle("active", i === currentIndex);
+        dot.classList.toggle("active", i === index);
       });
+      prevBtn.disabled = index === 0;
+      nextBtn.disabled = index === slides.length - 1;
     }
 
     prevBtn.addEventListener("click", () => {
-      const newIndex = (currentIndex - 1 + slides.length) % slides.length;
-      updateCarousel(newIndex);
+      if (currentIndex > 0) updateCarousel(currentIndex - 1);
     });
 
     nextBtn.addEventListener("click", () => {
-      const newIndex = (currentIndex + 1) % slides.length;
-      updateCarousel(newIndex);
+      if (currentIndex < slides.length - 1) updateCarousel(currentIndex + 1);
     });
 
     dots.forEach(dot => {
       dot.addEventListener("click", () => {
-        const index = Number(dot.getAttribute("data-index"));
-        updateCarousel(index);
+        const idx = Number(dot.getAttribute("data-index"));
+        updateCarousel(idx);
       });
-    });
-
-    // handle resize so slide width stays correct
-    window.addEventListener("resize", () => {
-      updateCarousel(currentIndex);
     });
   </script>
 </body>
