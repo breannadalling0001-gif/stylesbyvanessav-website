@@ -5,77 +5,295 @@
   <title>StylesByVanessaV</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    body {
+    :root {
+      --bg: #f9f4ec;
+      --text: #111111;
+      --accent: #111111;
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    body {
+      margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         Roboto, sans-serif;
-      background: #f9f4ec;
-      color: #111111;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 2rem 1rem;
+      background: var(--bg);
+      color: var(--text);
       text-align: center;
     }
 
-    img.logo {
-      width: 80%;
-      max-width: 340px;
-      height: auto;
-      margin-bottom: 1.5rem;
+    .page-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 3rem;
     }
 
-    h1 {
+    /* HERO */
+
+    .hero-logo {
+      width: 100%;
+      max-width: 380px;
+      height: auto;
+      margin: 0 auto 1.75rem;
+      display: block;
+    }
+
+    .hero-title {
       letter-spacing: 0.18em;
       text-transform: uppercase;
       font-size: 1.4rem;
       margin-bottom: 0.75rem;
     }
 
-    p {
-      max-width: 360px;
-      font-size: 0.95rem;
-      margin-bottom: 1.5rem;
-      line-height: 1.4;
+    .hero-text {
+      max-width: 420px;
+      margin: 0 auto 1.75rem;
+      font-size: 0.98rem;
+      line-height: 1.5;
     }
 
-    a.button {
+    .btn-primary {
       display: inline-block;
-      padding: 0.7rem 1.6rem;
+      padding: 0.8rem 2rem;
       border-radius: 999px;
-      background: #111111;
+      background: var(--accent);
       color: #ffffff;
       text-decoration: none;
       text-transform: uppercase;
       letter-spacing: 0.12em;
       font-size: 0.8rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+    }
+
+    /* SECTIONS */
+
+    .section {
+      text-align: left;
+      margin: 0 auto 2.5rem;
+      max-width: 620px;
+    }
+
+    .section-title {
+      text-align: center;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-sub {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 1.1rem 1.2rem;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      font-size: 0.9rem;
+    }
+
+    .card h3 {
+      font-size: 0.9rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .card ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .card ul li::before {
+      content: "– ";
+    }
+
+    .note {
+      font-size: 0.85rem;
+      color: #444;
       margin-top: 1rem;
     }
 
-    a.button:hover {
-      opacity: 0.9;
+    .note strong {
+      font-weight: 600;
+    }
+
+    .policy-list {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      padding-left: 1.1rem;
+    }
+
+    .policy-list li {
+      margin-bottom: 0.35rem;
+    }
+
+    .contact-row {
+      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
+      text-align: center;
+    }
+
+    .contact-row a {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+    }
+
+    footer {
+      font-size: 0.75rem;
+      color: #777;
+      text-align: center;
+      padding-bottom: 1rem;
+    }
+
+    @media (max-width: 480px) {
+      .page-wrap {
+        padding: 1.8rem 1.25rem 2.5rem;
+      }
+
+      .hero-logo {
+        max-width: 320px;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="page-wrap">
+    <!-- HERO -->
+    <img
+      src="F25DED8F-328C-43CE-A96B-E747DD95E1AD.png"
+      alt="StylesByVanessaV Logo"
+      class="hero-logo"
+    />
 
-  <!-- YOUR LOGO -->
-  <img src="F25DED8F-328C-43CE-A96B-E747DD95E1AD.png" class="logo" alt="StylesByVanessaV Logo" />
+    <h1 class="hero-title">StylesByVanessaV</h1>
 
-  <h1>StylesByVanessaV</h1>
+    <p class="hero-text">
+      Braids, locs, natural hair & crochet styles. Clean parts, protective
+      styling, and looks that last.
+    </p>
 
-  <p>
-    Braids, locs, natural hair & crochet styles.<br>
-    Clean parts, protective styling, and looks that last.
-  </p>
+    <a
+      class="btn-primary"
+      href="https://instagram.com/stylesbyvanessav"
+      target="_blank"
+      rel="noopener"
+    >
+      Book on Instagram
+    </a>
 
-  <a class="button"
-     href="https://instagram.com/stylesbyvanessav"
-     target="_blank"
-     rel="noopener">
-    Book on Instagram
-  </a>
+    <!-- SERVICES -->
+    <section class="section" id="services">
+      <h2 class="section-title">Services</h2>
+      <p class="section-sub">
+        A sample of styles offered. Final pricing depends on length, size and
+        details. Silk presses are <strong>not</strong> offered.
+      </p>
 
+      <div class="cards">
+        <div class="card">
+          <h3>Braids</h3>
+          <ul>
+            <li>Knotless braids (different sizes & lengths)</li>
+            <li>Box braids</li>
+            <li>Feed-in / stitch braids</li>
+            <li>Lemonade / side braids</li>
+            <li>Kids’ braids</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Locs & Natural</h3>
+          <ul>
+            <li>Starter locs</li>
+            <li>Loc retwist & maintenance</li>
+            <li>Two-strand twists</li>
+            <li>Natural hair cornrows / flat twists</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Crochet & More</h3>
+          <ul>
+            <li>Crochet braids</li>
+            <li>Crochet faux locs / passion twists</li>
+            <li>Other protective crochet styles</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="note">
+        For exact pricing and styles, send a DM to
+        <strong>@stylesbyvanessav</strong> with a photo of your hair and inspo.
+      </p>
+    </section>
+
+    <!-- BOOKING & POLICIES -->
+    <section class="section" id="booking">
+      <h2 class="section-title">Booking & Policies</h2>
+      <p class="section-sub">
+        Booking is done through Instagram DMs. Please read before requesting
+        an appointment.
+      </p>
+
+      <ul class="policy-list">
+        <li><strong>How to book:</strong> DM @stylesbyvanessav with your name, desired style, preferred date/time, and a recent photo of your hair.</li>
+        <li><strong>Deposits:</strong> A small non-refundable deposit may be required to secure your spot.</li>
+        <li><strong>Preparation:</strong> Arrive with clean, detangled hair and no heavy oils or grease.</li>
+        <li><strong>Lateness:</strong> Short grace period, then a late fee or cancellation may apply.</li>
+        <li><strong>Kids:</strong> Child must be able to sit for the full style and be accompanied by an adult.</li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-sub">
+        Have a question about a style, price, or availability? Reach out here.
+      </p>
+
+      <p class="contact-row">
+        <strong>Instagram:</strong>
+        <a href="https://instagram.com/stylesbyvanessav" target="_blank" rel="noopener">
+          @stylesbyvanessav
+        </a>
+      </p>
+
+      <p class="contact-row">
+        <strong>Email:</strong> yourauntemail@example.com
+        <!-- replace with her real email if she wants -->
+      </p>
+    </section>
+
+    <footer>
+      &copy; <span id="year"></span> StylesByVanessaV. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
