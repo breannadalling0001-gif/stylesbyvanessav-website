@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -57,7 +57,244 @@
   </script>
 
   <style>
-    /* ...your existing styles remain unchanged... */
+    :root {
+      --bg: #f9f4ec;
+      --text: #111111;
+      --accent: #111111;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      text-align: center;
+    }
+
+    .page-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 3rem;
+    }
+
+    /* HERO */
+    .hero-logo {
+      width: 100%;
+      max-width: 380px;
+      height: auto;
+      margin: 0 auto 1.75rem;
+      display: block;
+    }
+
+    .hero-title {
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-text {
+      max-width: 420px;
+      margin: 0 auto 1.75rem;
+      font-size: 0.98rem;
+      line-height: 1.5;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #ffffff;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.8rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+    }
+
+    /* SECTIONS */
+    .section {
+      text-align: left;
+      margin: 0 auto 2.5rem;
+      max-width: 620px;
+    }
+
+    .section-title {
+      text-align: center;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-sub {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 1.1rem 1.2rem;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      font-size: 0.9rem;
+    }
+
+    .card h3 {
+      font-size: 0.9rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .card ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .card ul li::before {
+      content: "– ";
+    }
+
+    .note {
+      font-size: 0.85rem;
+      color: #444;
+      margin-top: 1rem;
+    }
+
+    .policy-list {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      padding-left: 1.1rem;
+    }
+
+    .policy-list li {
+      margin-bottom: 0.35rem;
+    }
+
+    .contact-row {
+      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
+      text-align: center;
+    }
+
+    .contact-row a {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+    }
+
+    footer {
+      font-size: 0.75rem;
+      color: #777;
+      text-align: center;
+      padding-bottom: 1rem;
+    }
+
+    /* GALLERY CAROUSEL */
+    .gallery-wrapper {
+      max-width: 420px;
+      margin: 0 auto 0;
+    }
+
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.4s ease;
+    }
+
+    .slide {
+      min-width: 100%;
+      padding: 0.75rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .slide img {
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      max-height: 450px;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .carousel-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.4rem 0.75rem 0.65rem;
+      font-size: 0.78rem;
+    }
+
+    .dots {
+      display: flex;
+      gap: 0.35rem;
+      align-items: center;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      border: 1px solid #444;
+      background: transparent;
+    }
+
+    .dot.active {
+      background: #444;
+    }
+
+    .arrow-btn {
+      border: none;
+      background: none;
+      font-size: 1rem;
+      padding: 0.15rem 0.4rem;
+      cursor: pointer;
+      color: #444;
+    }
+
+    .arrow-btn:disabled {
+      opacity: 0.3;
+      cursor: default;
+    }
+
+    @media (max-width: 480px) {
+      .page-wrap {
+        padding: 1.8rem 1.25rem 2.5rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -86,12 +323,185 @@
       Book on Instagram
     </a>
 
-    <!-- ...rest of your sections remain unchanged... -->
+    <!-- GALLERY -->
+    <section class="section" id="gallery">
+      <h2 class="section-title">Gallery</h2>
+      <p class="section-sub">A peek at recent work. More styles coming soon.</p>
 
+      <div class="gallery-wrapper">
+        <div class="carousel">
+          <div class="carousel-track" id="carouselTrack">
+            <div class="slide">
+              <img src="IMG_0335.jpeg" alt="Style 1">
+            </div>
+            <div class="slide">
+              <img src="IMG_0336.jpeg" alt="Style 2">
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <button class="arrow-btn" id="prevBtn">&#10094;</button>
+            <div class="dots">
+              <div class="dot active" data-index="0"></div>
+              <div class="dot" data-index="1"></div>
+            </div>
+            <button class="arrow-btn" id="nextBtn">&#10095;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT VANESSA -->
+    <section class="section" id="about">
+      <h2 class="section-title">About Vanessa</h2>
+      <p class="section-sub" style="max-width: 600px; margin: 0 auto;">
+        Vanessa is a professional braider and natural hair stylist serving
+        clients in both Connecticut and New York. She specializes in clean
+        parts, long-lasting protective styles, knotless braids, loc maintenance,
+        and crochet installs. Every appointment is done with care for your
+        natural hair, edges, and overall comfort.
+      </p>
+    </section>
+
+    <!-- SERVING AREAS -->
+    <section class="section" id="areas">
+      <h2 class="section-title">Serving Areas</h2>
+      <p class="section-sub">
+        Mobile and in-studio appointments in select parts of CT & NYC.
+      </p>
+      <p class="contact-row">
+        <strong>Connecticut:</strong> Bridgeport (main), Stratford, Fairfield, Trumbull,
+        Norwalk, Stamford and nearby cities.
+      </p>
+      <p class="contact-row">
+        <strong>New York:</strong> Queens, Valley Stream, Jamaica, Laurelton, Rosedale and
+        surrounding areas.
+      </p>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services">
+      <h2 class="section-title">Services</h2>
+      <p class="section-sub">
+        A sample of styles offered. Final pricing depends on length, size and
+        details. Silk presses are <strong>not</strong> offered.
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Braids</h3>
+          <ul>
+            <li>Knotless braids (different sizes & lengths)</li>
+            <li>Box braids</li>
+            <li>Feed-in / stitch braids</li>
+            <li>Lemonade / side braids</li>
+            <li>Kids’ braids</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Locs & Natural</h3>
+          <ul>
+            <li>Starter locs</li>
+            <li>Loc retwist & maintenance</li>
+            <li>Two-strand twists</li>
+            <li>Natural hair cornrows / flat twists</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Crochet & More</h3>
+          <ul>
+            <li>Crochet braids</li>
+            <li>Crochet faux locs / passion twists</li>
+            <li>Other protective crochet styles</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="note">
+        For exact pricing and styles, send a DM to
+        <strong>@stylesbyvanessav</strong> with a photo of your hair and inspo.
+      </p>
+    </section>
+
+    <!-- BOOKING & POLICIES -->
+    <section class="section" id="booking">
+      <h2 class="section-title">Booking &amp; Policies</h2>
+      <p class="section-sub">
+        Booking is done through Instagram DMs. Please read before requesting
+        an appointment.
+      </p>
+
+      <ul class="policy-list">
+        <li><strong>How to book:</strong> DM @stylesbyvanessav with your name, desired style, preferred date/time, and a recent photo of your hair.</li>
+        <li><strong>Deposits:</strong> A small non-refundable deposit may be required to secure your spot.</li>
+        <li><strong>Preparation:</strong> Arrive with clean, detangled hair and no heavy oils or grease.</li>
+        <li><strong>Lateness:</strong> Short grace period, then a late fee or cancellation may apply.</li>
+        <li><strong>Kids:</strong> Child must be able to sit for the full style and be accompanied by an adult.</li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-sub">
+        Have a question about a style, price, or availability? Reach out here.
+      </p>
+
+      <p class="contact-row">
+        <strong>Instagram:</strong>
+        <a href="https://instagram.com/stylesbyvanessav" target="_blank" rel="noopener">
+          @stylesbyvanessav
+        </a>
+      </p>
+
+      <p class="contact-row">
+        <strong>Email:</strong> sheronrose3215@gmail.com
+      </p>
+    </section>
+
+    <footer>
+      &copy; <span id="year"></span> StylesByVanessaV. All rights reserved.
+    </footer>
   </div>
 
   <script>
-    // ...your existing JavaScript remains unchanged...
+    // Year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Simple carousel
+    const track = document.getElementById("carouselTrack");
+    const slides = Array.from(track.children);
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const dots = Array.from(document.querySelectorAll(".dot"));
+
+    let currentIndex = 0;
+
+    function updateCarousel(index) {
+      currentIndex = index;
+      track.style.transform = `translateX(-${index * 100}%)`;
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === index);
+      });
+      prevBtn.disabled = index === 0;
+      nextBtn.disabled = index === slides.length - 1;
+    }
+
+    prevBtn.addEventListener("click", () => {
+      if (currentIndex > 0) updateCarousel(currentIndex - 1);
+    });
+
+    nextBtn.addEventListener("click", () => {
+      if (currentIndex < slides.length - 1) updateCarousel(currentIndex + 1);
+    });
+
+    dots.forEach(dot => {
+      dot.addEventListener("click", () => {
+        const idx = Number(dot.getAttribute("data-index"));
+        updateCarousel(idx);
+      });
+    });
   </script>
 </body>
 </html>
