@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <!-- Google Verification -->
+  <meta name="google-site-verification" content="dauWeYf8ZVioHuGxzQ6HgFmeoqHJOwJ3okewjiiHcQQ">
+
+  <!-- SEO Description -->
+  <meta name="description" content="Services offered by StylesByVanessaV – Braids, locs, natural hair, crochet styles, and protective styling in CT & NYC.">
+
+  <!-- SEO Keywords -->
+  <meta name="keywords" content="StylesByVanessaV, Styles by Vanessa V, braids, box braids, knotless braids, loc retwist, natural hair styling, crochet styles, protective styles">
+
+  <!-- Mobile Friendly -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Services – StylesByVanessaV</title>
+
+  <style>
+    :root {
+      --bg: #f9f4ec;
+      --text: #111111;
+      --accent: #111111;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      text-align: center;
+    }
+
+    .page-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 3rem;
+    }
+
+    nav {
+      margin-bottom: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: bold;
+      margin: 0 0.75rem;
+    }
+
+    .section {
+      text-align: left;
+      margin: 0 auto 2.5rem;
+      max-width: 620px;
+    }
+
+    .section-title {
+      text-align: center;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-sub {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 1.1rem 1.2rem;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      font-size: 0.9rem;
+    }
+
+    .card h3 {
+      font-size: 0.9rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .card ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .card ul li::before {
+      content: "– ";
+    }
+
+    .note {
+      font-size: 0.85rem;
+      color: #444;
+      margin-top: 1rem;
+    }
+
+    footer {
+      font-size: 0.75rem;
+      color: #777;
+      text-align: center;
+      padding-bottom: 1rem;
+    }
+
+    @media (max-width: 480px) {
+      .page-wrap {
+        padding: 1.8rem 1.25rem 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrap">
+
+    <!-- Navigation -->
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="about.html">About</a> |
+      <a href="services.html">Services</a>
+    </nav>
+
+    <!-- SERVICES -->
+    <section class="section" id="services">
+      <h2 class="section-title">Services</h2>
+      <p class="section-sub">
+        A sample of styles offered. Final pricing depends on length, size, and details. Silk presses are <strong>not</strong> offered.
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Braids</h3>
+          <ul>
+            <li>Knotless braids (different sizes & lengths)</li>
+            <li>Box braids</li>
+            <li>Feed-in / stitch braids</li>
+            <li>Lemonade / side braids</li>
+            <li>Kids’ braids</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Locs & Natural</h3>
+          <ul>
+            <li>Starter locs</li>
+            <li>Loc retwist & maintenance</li>
+            <li>Two-strand twists</li>
+            <li>Natural hair cornrows / flat twists</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Crochet & More</h3>
+          <ul>
+            <li>Crochet braids</li>
+            <li>Crochet faux locs / passion twists</li>
+            <li>Other protective crochet styles</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="note">
+        For exact pricing and styles, send a DM to <strong>@stylesbyvanessav</strong> with a photo of your hair and inspo.
+      </p>
+    </section>
+
+    <footer>
+      &copy; <span id="year"></span> StylesByVanessaV. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    // Year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
