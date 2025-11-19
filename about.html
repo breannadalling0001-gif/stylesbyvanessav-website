@@ -10,7 +10,7 @@
   <meta name="description" content="About Vanessa – StylesByVanessaV specializes in braids, locs, natural hair, and crochet styles.">
 
   <!-- SEO Keywords -->
-  <meta name="keywords" content="StylesByVanessaV, Styles by Vanessa V, braids, braider, natural hair stylist, crochet styles, knotless braids, loc retwist, protective styles">
+  <meta name="keywords" content="StylesByVanessaV, braids, locs, natural hair stylist, crochet styles, protective styles">
 
   <!-- Mobile Friendly -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,102 +24,83 @@
       --accent: #111111;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); text-align: center; }
+    a { text-decoration: none; color: inherit; }
+    .page-wrap { max-width: 720px; margin: 0 auto; padding: 2.5rem 1.5rem 3rem; }
 
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      text-align: center;
-    }
-
-    .page-wrap {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 2.5rem 1.5rem 3rem;
-    }
-
-    nav {
-      margin-bottom: 2rem;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--accent);
-      font-weight: bold;
-      margin: 0 0.75rem;
-    }
-
-    .section {
-      text-align: left;
-      margin: 0 auto 2.5rem;
-      max-width: 620px;
-    }
-
-    .section-title {
-      text-align: center;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      font-size: 0.95rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .section-sub {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #555;
-      margin-bottom: 1.5rem;
-    }
-
-    footer {
-      font-size: 0.75rem;
-      color: #777;
-      text-align: center;
-      padding-bottom: 1rem;
-    }
-
+    /* HEADER */
+    .site-header { position: sticky; top: 0; background: var(--bg); z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.1); }
+    .nav-container { max-width: 720px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1rem; }
+    nav ul { list-style: none; display: flex; gap: 1rem; }
+    nav ul li a { text-decoration: none; color: var(--text); font-weight: bold; }
+    .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 4px; }
+    .hamburger span { width: 25px; height: 3px; background: var(--text); display: block; border-radius: 2px; }
     @media (max-width: 480px) {
-      .page-wrap {
-        padding: 1.8rem 1.25rem 2.5rem;
-      }
+      nav ul { position: absolute; top: 100%; left: 0; right: 0; background: var(--bg); flex-direction: column; gap: 0; display: none; }
+      nav ul.show { display: flex; }
+      nav ul li { padding: 0.75rem 0; text-align: center; }
+      .hamburger { display: flex; }
     }
+
+    .section { text-align: left; margin: 0 auto 2.5rem; max-width: 620px; }
+    .section-title { text-align: center; letter-spacing: 0.16em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 0.5rem; }
+    .section-sub { text-align: center; font-size: 0.9rem; color: #555; margin-bottom: 1.5rem; }
+
+    footer { font-size: 0.75rem; color: #777; text-align: center; padding-bottom: 1rem; }
+
   </style>
 </head>
 <body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html">StylesByVanessaV</a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
   <div class="page-wrap">
 
-    <!-- Navigation -->
-    <nav>
-      <a href="index.html">Home</a> |
-      <a href="about.html">About</a>
-    </nav>
-
-    <!-- ABOUT VANESSA -->
+    <!-- ABOUT SECTION -->
     <section class="section" id="about">
       <h2 class="section-title">About Vanessa</h2>
       <p class="section-sub" style="max-width: 600px; margin: 0 auto;">
-        Vanessa is a professional braider and natural hair stylist serving
-        clients in both Connecticut and New York. She specializes in clean
-        parts, long-lasting protective styles, knotless braids, loc maintenance,
-        and crochet installs. Every appointment is done with care for your
-        natural hair, edges, and overall comfort.
+        Vanessa is a professional braider and natural hair stylist serving clients in both Connecticut and New York. She specializes in clean parts, long-lasting protective styles, knotless braids, loc maintenance, and crochet installs. Every appointment is done with care for your natural hair, edges, and overall comfort.
       </p>
     </section>
 
-    <footer>
-      &copy; <span id="year"></span> StylesByVanessaV. All rights reserved.
-    </footer>
   </div>
 
+  <footer>
+    &copy; <span id="year"></span> StylesByVanessaV. All rights reserved.
+  </footer>
+
   <script>
-    // Year in footer
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Hamburger menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('nav ul');
+    hamburger.addEventListener('click', () => { navLinks.classList.toggle('show'); });
   </script>
+
 </body>
 </html>
