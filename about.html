@@ -142,5 +142,11 @@
     // Year in footer
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+   // Hamburger menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('nav ul');
+    hamburger.addEventListener('click', () => { navLinks.classList.toggle('show'); });
+  </script>
+  
 </body>
 </html>
