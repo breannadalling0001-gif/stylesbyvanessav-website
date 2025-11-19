@@ -4,31 +4,37 @@
   <url>
     <loc>https://stylesbyvanessav.com/</loc>
     <priority>1.0</priority>
+    <lastmod>2025-01-15</lastmod>
   </url>
 
   <url>
     <loc>https://stylesbyvanessav.com/about.html</loc>
     <priority>0.8</priority>
+    <lastmod>2025-01-15</lastmod>
   </url>
 
   <url>
     <loc>https://stylesbyvanessav.com/services.html</loc>
     <priority>0.8</priority>
+    <lastmod>2025-01-15</lastmod>
   </url>
 
   <url>
     <loc>https://stylesbyvanessav.com/gallery.html</loc>
     <priority>0.8</priority>
+    <lastmod>2025-01-15</lastmod>
   </url>
 
   <url>
     <loc>https://stylesbyvanessav.com/booking.html</loc>
     <priority>0.9</priority>
+    <lastmod>2025-01-15</lastmod>
   </url>
 
   <url>
     <loc>https://stylesbyvanessav.com/contact.html</loc>
     <priority>0.8</priority>
+    <lastmod>2025-11-19</lastmod>
   </url>
 
 </urlset>
