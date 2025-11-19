@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <!-- Google Verification -->
+  <meta name="google-site-verification" content="dauWeYf8ZVioHuGxzQ6HgFmeoqHJOwJ3okewjiiHcQQ">
+
+  <!-- SEO Description -->
+  <meta name="description" content="Gallery of StylesByVanessaV – braids, locs, crochet styles, and protective styles in CT & NYC.">
+
+  <!-- SEO Keywords -->
+  <meta name="keywords" content="StylesByVanessaV, braids, locs, crochet styles, protective styles, gallery, CT, NYC">
+
+  <!-- Mobile Friendly -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Gallery – StylesByVanessaV</title>
+
+  <style>
+    :root {
+      --bg: #f9f4ec;
+      --text: #111111;
+      --accent: #111111;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      text-align: center;
+    }
+
+    .page-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 3rem;
+    }
+
+    nav {
+      margin-bottom: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: bold;
+      margin: 0 0.75rem;
+    }
+
+    .section-title {
+      text-align: center;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-sub {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    .gallery-wrapper {
+      max-width: 420px;
+      margin: 0 auto 2rem;
+    }
+
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.4s ease;
+    }
+
+    .slide {
+      min-width: 100%;
+      padding: 0.75rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .slide img {
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      max-height: 450px;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .carousel-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.4rem 0.75rem 0.65rem;
+      font-size: 0.78rem;
+    }
+
+    .dots {
+      display: flex;
+      gap: 0.35rem;
+      align-items: center;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      border: 1px solid #444;
+      background: transparent;
+    }
+
+    .dot.active {
+      background: #444;
+    }
+
+    .arrow-btn {
+      border: none;
+      background: none;
+      font-size: 1rem;
+      padding: 0.15rem 0.4rem;
+      cursor: pointer;
+      color: #444;
+    }
+
+    .arrow-btn:disabled {
+      opacity: 0.3;
+      cursor: default;
+    }
+
+    footer {
+      font-size: 0.75rem;
+      color: #777;
+      text-align: center;
+      padding-bottom: 1rem;
+    }
+
+    @media (max-width: 480px) {
+      .page-wrap {
+        padding: 1.8rem 1.25rem 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrap">
+    <!-- Navigation -->
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="about.html">About</a> |
+      <a href="services.html">Services</a> |
+      <a href="gallery.html">Gallery</a>
+    </nav>
+
+    <!-- GALLERY -->
+    <section class="section" id="gallery">
+      <h2 class="section-title">Gallery</h2>
+      <p class="section-sub">A peek at recent work. More styles coming soon.</p>
+
+      <div class="gallery-wrapper">
+        <div class="carousel">
+          <div class="carousel-track" id="carouselTrack">
+            <div class="slide">
+              <img src="IMG_0335.jpeg" alt="Style 1">
+            </div>
+            <div class="slide">
+              <img src="IMG_0336.jpeg" alt="Style 2">
+            </div>
+            <!-- Add more slides here -->
+          </div>
+          <div class="carousel-controls">
+            <button class="arrow-btn" id="prevBtn">&#10094;</button>
+            <div class="dots">
+              <div class="dot active" data-index="0"></div>
+              <div class="dot" data-index="1"></div>
+              <!-- Add more dots corresponding to slides -->
+            </div>
+            <button class="arrow-btn" id="nextBtn">&#10095;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      &copy; <span id="year"></span> StylesByVanessaV. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    // Year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Carousel functionality
+    const track = document.getElementById("carouselTrack");
+    const slides = Array.from(track.children);
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const dots = Array.from(document.querySelectorAll(".dot"));
+    let currentIndex = 0;
+
+    function updateCarousel(index) {
+      currentIndex = index;
+      track.style.transform = `translateX(-${index * 100}%)`;
+      dots.forEach((dot, i) => dot.classList.toggle("active", i === index));
+      prevBtn.disabled = index === 0;
+      nextBtn.disabled = index === slides.length - 1;
+    }
+
+    prevBtn.addEventListener("click", () => {
+      if (currentIndex > 0) updateCarousel(currentIndex - 1);
+    });
+
+    nextBtn.addEventListener("click", () => {
+      if (currentIndex < slides.length - 1) updateCarousel(currentIndex + 1);
+    });
+
+    dots.forEach(dot => {
+      dot.addEventListener("click", () => {
+        const idx = Number(dot.getAttribute("data-index"));
+        updateCarousel(idx);
+      });
+    });
+  </script>
+</body>
+</html>
