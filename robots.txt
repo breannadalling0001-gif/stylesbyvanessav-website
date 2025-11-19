@@ -1,4 +1,6 @@
+# robots.txt for StylesByVanessaV
+
 User-agent: *
 Allow: /
 
-Sitemap: https://stylesbyvanessav.com/sitemap.xml
+Sitemap: https://breannadalling0001.github.io/stylesbyvanessav-website/sitemap.xml
