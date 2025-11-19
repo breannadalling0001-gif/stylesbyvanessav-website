@@ -7,15 +7,32 @@
   <meta name="google-site-verification" content="dauWeYf8ZVioHuGxzQ6HgFmeoqHJOwJ3okewjiiHcQQ">
 
   <!-- SEO Description -->
-  <meta name="description" content="StylesByVanessaV specializes in braids, locs, natural hair, and crochet styles in CT & NYC. Book your appointment today.">
+  <meta name="description" content="StylesByVanessaV specializes in braids, locs, natural hair, and crochet styles. Clean parts, long-lasting protective styles, and professional service in Bridgeport CT, Queens NY, Valley Stream and surrounding areas.">
 
   <!-- SEO Keywords -->
-  <meta name="keywords" content="StylesByVanessaV, braids, locs, natural hair stylist, crochet styles, protective styles, CT braider, NYC braider">
+  <meta name="keywords" content="StylesByVanessaV, Styles by Vanessa V, braids Bridgeport, braider Bridgeport, braider Queens, braider Valley Stream, natural hair stylist, crochet styles, knotless braids, loc retwist, protective styles, CT braider, NYC braider">
 
   <!-- Mobile Friendly -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>StylesByVanessaV – Braids, Locs & Natural Hair (CT & NYC)</title>
+
+  <!-- Business Schema (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "StylesByVanessaV",
+    "alternateName": "Styles by Vanessa V",
+    "url": "https://breannadalling0001-gif.github.io/stylesbyvanessav-website/",
+    "logo": "https://breannadalling0001-gif.github.io/stylesbyvanessav-website/F25DED8F-328C-43CE-A96B-E747DD95E1AD.png",
+    "image": "https://breannadalling0001-gif.github.io/stylesbyvanessav-website/F25DED8F-328C-43CE-A96B-E747DD95E1AD.png",
+    "description": "Professional braider and natural hair stylist specializing in knotless braids, locs, crochet styles, and protective styling. Clean parts, long-lasting results. Serving Bridgeport CT and surrounding areas, plus Queens and Valley Stream in NYC.",
+    "sameAs": [
+      "https://www.instagram.com/stylesbyvanessav/"
+    ]
+  }
+  </script>
 
   <style>
     :root {
@@ -39,8 +56,8 @@
     }
 
     a {
-      text-decoration: none;
       color: inherit;
+      text-decoration: none;
     }
 
     .page-wrap {
@@ -49,75 +66,25 @@
       padding: 2.5rem 1.5rem 3rem;
     }
 
-    /* HEADER */
-    .site-header {
-      position: sticky;
-      top: 0;
-      background: var(--bg);
-      z-index: 1000;
-      border-bottom: 1px solid rgba(0,0,0,0.1);
-    }
-
-    .nav-container {
-      max-width: 720px;
-      margin: 0 auto;
+    /* NAVIGATION BAR */
+    nav {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.75rem 1rem;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
+      justify-content: center;
       gap: 1rem;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: var(--text);
+      margin-bottom: 2rem;
       font-weight: bold;
+      text-transform: uppercase;
     }
 
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      gap: 4px;
+    nav a {
+      color: var(--accent);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: background 0.2s;
     }
 
-    .hamburger span {
-      width: 25px;
-      height: 3px;
-      background: var(--text);
-      display: block;
-      border-radius: 2px;
-    }
-
-    @media (max-width: 480px) {
-      nav ul {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: var(--bg);
-        flex-direction: column;
-        gap: 0;
-        display: none;
-      }
-
-      nav ul.show {
-        display: flex;
-      }
-
-      nav ul li {
-        padding: 0.75rem 0;
-        text-align: center;
-      }
-
-      .hamburger {
-        display: flex;
-      }
+    nav a:hover {
+      background: rgba(0,0,0,0.05);
     }
 
     /* HERO */
@@ -132,14 +99,14 @@
     .hero-title {
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       margin-bottom: 0.75rem;
     }
 
     .hero-text {
       max-width: 420px;
       margin: 0 auto 1.75rem;
-      font-size: 0.98rem;
+      font-size: 1rem;
       line-height: 1.5;
     }
 
@@ -182,7 +149,53 @@
       margin-bottom: 1.5rem;
     }
 
-    /* GALLERY */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 1.1rem 1.2rem;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      font-size: 0.9rem;
+    }
+
+    .card h3 {
+      font-size: 0.9rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .card ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .card ul li::before {
+      content: "– ";
+    }
+
+    .note {
+      font-size: 0.85rem;
+      color: #444;
+      margin-top: 1rem;
+    }
+
+    footer {
+      font-size: 0.75rem;
+      color: #777;
+      text-align: center;
+      padding-bottom: 1rem;
+    }
+
+    /* GALLERY CAROUSEL */
     .gallery-wrapper {
       max-width: 420px;
       margin: 0 auto 0;
@@ -192,8 +205,8 @@
       position: relative;
       overflow: hidden;
       border-radius: 16px;
-      background: rgba(255,255,255,0.7);
-      border: 1px solid rgba(0,0,0,0.06);
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(0, 0, 0, 0.06);
     }
 
     .carousel-track {
@@ -258,48 +271,75 @@
       cursor: default;
     }
 
-    footer {
-      font-size: 0.75rem;
-      color: #777;
-      text-align: center;
-      padding-bottom: 1rem;
+    /* BOOKING FORM */
+    .booking-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      max-width: 400px;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.85);
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+    }
+
+    .booking-form label {
+      font-size: 0.9rem;
+      font-weight: bold;
+      margin-bottom: 0.2rem;
+    }
+
+    .booking-form input, .booking-form select, .booking-form textarea {
+      padding: 0.5rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 0.9rem;
+    }
+
+    .booking-form button {
+      padding: 0.6rem;
+      border-radius: 999px;
+      border: none;
+      background: var(--accent);
+      color: #fff;
+      text-transform: uppercase;
+      cursor: pointer;
+      letter-spacing: 0.1em;
+      font-size: 0.85rem;
+    }
+
+    .booking-form button:hover {
+      opacity: 0.9;
+    }
+
+    @media (max-width: 480px) {
+      .page-wrap {
+        padding: 1.8rem 1.25rem 2.5rem;
+      }
     }
   </style>
 </head>
 <body>
-
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="nav-container">
-      <div class="logo">
-        <a href="index.html">StylesByVanessaV</a>
-      </div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="booking.html">Booking</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </nav>
-    </div>
-  </header>
-
   <div class="page-wrap">
+
+    <!-- NAVIGATION -->
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="booking.html">Book</a>
+      <a href="contact.html">Contact</a>
+    </nav>
 
     <!-- HERO -->
     <img src="F25DED8F-328C-43CE-A96B-E747DD95E1AD.png" alt="StylesByVanessaV Logo" class="hero-logo" />
     <h1 class="hero-title">StylesByVanessaV</h1>
     <p style="font-size:0.9rem; margin-top:0.5rem;">Also known as <strong>Styles by Vanessa V</strong></p>
-    <p class="hero-text">Braids, locs, natural hair & crochet styles. Clean parts, protective styling, and looks that last.</p>
-    <a class="btn-primary" href="https://instagram.com/stylesbyvanessav" target="_blank" rel="noopener">Book on Instagram</a>
+    <p class="hero-text">
+      Braids, locs, natural hair & crochet styles. Clean parts, protective styling, and looks that last. Serving Bridgeport CT, Queens NY, and surrounding areas with care and precision.
+    </p>
+    <a class="btn-primary" href="#booking">Book Now</a>
 
     <!-- GALLERY -->
     <section class="section" id="gallery">
@@ -323,43 +363,107 @@
       </div>
     </section>
 
-    <!-- ABOUT -->
+    <!-- ABOUT VANESSA -->
     <section class="section" id="about">
       <h2 class="section-title">About Vanessa</h2>
       <p class="section-sub" style="max-width: 600px; margin: 0 auto;">
-        Vanessa is a professional braider and natural hair stylist serving clients in both Connecticut and New York. She specializes in clean parts, long-lasting protective styles, knotless braids, loc maintenance, and crochet installs. Every appointment is done with care for your natural hair, edges, and overall comfort.
+        Vanessa has 10+ years of professional experience in braiding, locs, and crochet styles. She focuses on protective styling, hair health, and client comfort. Vanessa’s attention to detail ensures each braid or twist is precise and long-lasting.
       </p>
     </section>
 
     <!-- SERVICES -->
     <section class="section" id="services">
       <h2 class="section-title">Services</h2>
-      <p class="section-sub">Sample styles. DM for exact pricing and details.</p>
-      <ul style="list-style:disc; padding-left:1.2rem; font-size:0.9rem;">
-        <li>Knotless braids, box braids, feed-in braids</li>
-        <li>Starter locs, retwist, two-strand twists</li>
-        <li>Crochet braids, faux locs, passion twists</li>
-      </ul>
+      <p class="section-sub">
+        Vanessa offers a variety of styles customized to each client. Final pricing depends on hair length, thickness, and style complexity.
+      </p>
+      <div class="cards">
+        <div class="card">
+          <h3>Braids</h3>
+          <ul>
+            <li>Knotless braids (various sizes & lengths)</li>
+            <li>Box braids</li>
+            <li>Feed-in / stitch braids</li>
+            <li>Lemonade / side braids</li>
+            <li>Kids’ braids</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Locs & Natural</h3>
+          <ul>
+            <li>Starter locs</li>
+            <li>Loc retwist & maintenance</li>
+            <li>Two-strand twists</li>
+            <li>Natural hair cornrows / flat twists</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Crochet & More</h3>
+          <ul>
+            <li>Crochet braids</li>
+            <li>Crochet faux locs / passion twists</li>
+            <li>Other protective crochet styles</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOKING -->
+    <section class="section" id="booking">
+      <h2 class="section-title">Booking & Policies</h2>
+      <p class="section-sub">Book your appointment easily using the form below or send a DM on Instagram.</p>
+
+      <form class="booking-form" action="mailto:sheronrose3215@gmail.com" method="post" enctype="text/plain">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="style">Desired Style</label>
+        <select id="style" name="style" required>
+          <option value="">Select a style</option>
+          <option value="knotless">Knotless Braids</option>
+          <option value="box">Box Braids</option>
+          <option value="feedin">Feed-in / Stitch Braids</option>
+          <option value="crochet">Crochet / Faux Locs</option>
+          <option value="locs">Loc Retwist / Maintenance</option>
+        </select>
+
+        <label for="date">Preferred Date</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Preferred Time</label>
+        <input type="time" id="time" name="time" required>
+
+        <label for="notes">Additional Notes</label>
+        <textarea id="notes" name="notes" rows="3"></textarea>
+
+        <button type="submit">Submit Booking Request</button>
+      </form>
     </section>
 
     <!-- CONTACT -->
     <section class="section" id="contact">
       <h2 class="section-title">Contact</h2>
-      <p class="section-sub">Reach out with questions or booking inquiries.</p>
-      <p><strong>Instagram:</strong> <a href="https://instagram.com/stylesbyvanessav" target="_blank">@stylesbyvanessav</a></p>
-      <p><strong>Email:</strong> sheronrose3215@gmail.com</p>
+      <p class="section-sub">Questions about styles, pricing, or availability? Reach out!</p>
+      <p class="contact-row"><strong>Instagram:</strong> <a href="https://instagram.com/stylesbyvanessav" target="_blank">@stylesbyvanessav</a></p>
+      <p class="contact-row"><strong>Email:</strong> sheronrose3215@gmail.com</p>
     </section>
 
+    <footer>
+      &copy; <span id="year"></span> StylesByVanessaV. All rights reserved.
+    </footer>
   </div>
 
-  <footer>
-    &copy; <span id="year"></span> StylesByVanessaV. All rights reserved.
-  </footer>
-
   <script>
+    // Footer Year
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Carousel JS
+    // Carousel
     const track = document.getElementById("carouselTrack");
     const slides = Array.from(track.children);
     const prevBtn = document.getElementById("prevBtn");
@@ -375,13 +479,7 @@
     }
     prevBtn.addEventListener("click", () => { if(currentIndex>0) updateCarousel(currentIndex-1); });
     nextBtn.addEventListener("click", () => { if(currentIndex<slides.length-1) updateCarousel(currentIndex+1); });
-    dots.forEach(dot => { dot.addEventListener("click", () => updateCarousel(Number(dot.dataset.index))); });
-
-    // Hamburger menu toggle
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('nav ul');
-    hamburger.addEventListener('click', () => { navLinks.classList.toggle('show'); });
+    dots.forEach(dot => { dot.addEventListener("click", () => { updateCarousel(Number(dot.dataset.index)); }); });
   </script>
-
 </body>
 </html>
