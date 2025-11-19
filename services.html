@@ -7,10 +7,10 @@
   <meta name="google-site-verification" content="dauWeYf8ZVioHuGxzQ6HgFmeoqHJOwJ3okewjiiHcQQ">
 
   <!-- SEO Description -->
-  <meta name="description" content="Services offered by Vanessa – StylesByVanessaV specializes in braids, locs, natural hair, and crochet styles.">
+  <meta name="description" content="Services offered by Vanessa at StylesByVanessaV – Braids, locs, crochet styles, protective styling in CT & NYC.">
 
   <!-- SEO Keywords -->
-  <meta name="keywords" content="StylesByVanessaV, braids, locs, natural hair stylist, crochet styles, protective styles">
+  <meta name="keywords" content="StylesByVanessaV, Styles by Vanessa V, braids, natural hair stylist, loc retwist, crochet styles, protective styles, CT braider, NYC braider">
 
   <!-- Mobile Friendly -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,127 +24,181 @@
       --accent: #111111;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); text-align: center; }
-    a { text-decoration: none; color: inherit; }
-    .page-wrap { max-width: 720px; margin: 0 auto; padding: 2.5rem 1.5rem 3rem; }
-
-    /* HEADER */
-    .site-header { position: sticky; top: 0; background: var(--bg); z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.1); }
-    .nav-container { max-width: 720px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1rem; }
-    nav ul { list-style: none; display: flex; gap: 1rem; }
-    nav ul li a { text-decoration: none; color: var(--text); font-weight: bold; }
-    .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 4px; }
-    .hamburger span { width: 25px; height: 3px; background: var(--text); display: block; border-radius: 2px; }
-    @media (max-width: 480px) {
-      nav ul { position: absolute; top: 100%; left: 0; right: 0; background: var(--bg); flex-direction: column; gap: 0; display: none; }
-      nav ul.show { display: flex; }
-      nav ul li { padding: 0.75rem 0; text-align: center; }
-      .hamburger { display: flex; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    .section { text-align: left; margin: 0 auto 2.5rem; max-width: 620px; }
-    .section-title { text-align: center; letter-spacing: 0.16em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 0.5rem; }
-    .section-sub { text-align: center; font-size: 0.9rem; color: #555; margin-bottom: 1.5rem; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      text-align: center;
+    }
 
-    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; }
-    .card { border-radius: 14px; background: rgba(255, 255, 255, 0.7); padding: 1.1rem 1.2rem; border: 1px solid rgba(0,0,0,0.06); font-size: 0.9rem; }
-    .card h3 { font-size: 0.9rem; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 0.5rem; }
-    .card ul { list-style: none; padding-left: 0; margin: 0; font-size: 0.9rem; line-height: 1.5; }
-    .card ul li::before { content: "– "; }
+    .page-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 3rem;
+    }
 
-    .note { font-size: 0.85rem; color: #444; margin-top: 1rem; }
+    nav {
+      margin-bottom: 2rem;
+    }
 
-    footer { font-size: 0.75rem; color: #777; text-align: center; padding-bottom: 1rem; }
+    nav a {
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: bold;
+      margin: 0 0.75rem;
+    }
 
+    .section {
+      text-align: left;
+      margin: 0 auto 2.5rem;
+      max-width: 620px;
+    }
+
+    .section-title {
+      text-align: center;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-sub {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 1.1rem 1.2rem;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      font-size: 0.9rem;
+    }
+
+    .card h3 {
+      font-size: 0.9rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .card ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .card ul li::before {
+      content: "– ";
+    }
+
+    .note {
+      font-size: 0.85rem;
+      color: #444;
+      margin-top: 1rem;
+    }
+
+    footer {
+      font-size: 0.75rem;
+      color: #777;
+      text-align: center;
+      padding-bottom: 1rem;
+    }
+
+    @media (max-width: 480px) {
+      .page-wrap {
+        padding: 1.8rem 1.25rem 2.5rem;
+      }
+    }
   </style>
 </head>
 <body>
-
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="nav-container">
-      <div class="logo">
-        <a href="index.html">StylesByVanessaV</a>
-      </div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="booking.html">Booking</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </nav>
-    </div>
-  </header>
-
   <div class="page-wrap">
 
-    <!-- SERVICES SECTION -->
+    <!-- Navigation -->
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="about.html">About</a> |
+      <a href="services.html">Services</a> |
+      <a href="gallery.html">Gallery</a> |
+      <a href="booking.html">Booking</a> |
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- SERVICES -->
     <section class="section" id="services">
       <h2 class="section-title">Services</h2>
       <p class="section-sub">
-        A sample of styles offered. Final pricing depends on length, size and details. Silk presses are <strong>not</strong> offered.
+        Vanessa offers a variety of protective styles and natural hair services. 
+        Final pricing depends on hair length, thickness, style complexity, and size.
       </p>
 
       <div class="cards">
         <div class="card">
           <h3>Braids</h3>
           <ul>
-            <li>Knotless braids (different sizes & lengths)</li>
-            <li>Box braids</li>
+            <li>Knotless braids (small, medium, large, any length)</li>
+            <li>Box braids (classic and trendy variations)</li>
             <li>Feed-in / stitch braids</li>
-            <li>Lemonade / side braids</li>
-            <li>Kids’ braids</li>
+            <li>Lemonade or side braids</li>
+            <li>Kids’ braids (gentle and age-appropriate styles)</li>
           </ul>
         </div>
 
         <div class="card">
           <h3>Locs & Natural</h3>
           <ul>
-            <li>Starter locs</li>
-            <li>Loc retwist & maintenance</li>
-            <li>Two-strand twists</li>
-            <li>Natural hair cornrows / flat twists</li>
+            <li>Starter locs (for clients beginning their loc journey)</li>
+            <li>Loc retwist and maintenance (all loc types)</li>
+            <li>Two-strand twists for natural hair</li>
+            <li>Natural hair cornrows, flat twists, or protective parting</li>
+            <li>Consultations on hair health and growth strategies</li>
           </ul>
         </div>
 
         <div class="card">
           <h3>Crochet & More</h3>
           <ul>
-            <li>Crochet braids</li>
+            <li>Crochet braids (bohemian, curly, wavy)</li>
             <li>Crochet faux locs / passion twists</li>
-            <li>Other protective crochet styles</li>
+            <li>Protective crochet styles for everyday wear or events</li>
+            <li>Extensions installation guidance and care tips</li>
           </ul>
         </div>
       </div>
 
       <p class="note">
-        For exact pricing and styles, send a DM to <strong>@stylesbyvanessav</strong> with a photo of your hair and inspiration.
+        For exact pricing and availability, please DM
+        <strong>@stylesbyvanessav</strong> with a photo of your hair and your desired style.
       </p>
     </section>
 
+    <footer>
+      &copy; <span id="year"></span> StylesByVanessaV. All rights reserved.
+    </footer>
   </div>
 
-  <footer>
-    &copy; <span id="year"></span> StylesByVanessaV. All rights reserved.
-  </footer>
-
   <script>
+    // Year in footer
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Hamburger menu toggle
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('nav ul');
-    hamburger.addEventListener('click', () => { navLinks.classList.toggle('show'); });
   </script>
-
 </body>
 </html>
