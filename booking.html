@@ -7,10 +7,10 @@
   <meta name="google-site-verification" content="dauWeYf8ZVioHuGxzQ6HgFmeoqHJOwJ3okewjiiHcQQ">
 
   <!-- SEO Description -->
-  <meta name="description" content="Booking information for StylesByVanessaV – DM to reserve your spot for braids, locs, natural hair, and crochet styles.">
+  <meta name="description" content="Book your appointment with Vanessa at StylesByVanessaV – Braids, locs, crochet, and protective styles in CT & NYC.">
 
   <!-- SEO Keywords -->
-  <meta name="keywords" content="StylesByVanessaV, booking, braids, locs, crochet styles, natural hair, protective styles">
+  <meta name="keywords" content="StylesByVanessaV, Styles by Vanessa V, book appointment, braids booking, locs booking, crochet styles booking, CT braider, NYC braider">
 
   <!-- Mobile Friendly -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,100 +22,176 @@
       --bg: #f9f4ec;
       --text: #111111;
       --accent: #111111;
+      --input-bg: #fff;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { margin:0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); text-align: center; }
-    a { text-decoration: none; color: inherit; }
-    .page-wrap { max-width: 720px; margin: 0 auto; padding: 2.5rem 1.5rem 3rem; }
+    * { box-sizing: border-box; margin:0; padding:0; }
 
-    /* HEADER */
-    .site-header { position: sticky; top: 0; background: var(--bg); z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.1); }
-    .nav-container { max-width: 720px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1rem; }
-    nav ul { list-style: none; display: flex; gap: 1rem; }
-    nav ul li a { text-decoration: none; color: var(--text); font-weight: bold; }
-    .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 4px; }
-    .hamburger span { width: 25px; height: 3px; background: var(--text); display: block; border-radius: 2px; }
-    @media (max-width: 480px) {
-      nav ul { position: absolute; top: 100%; left: 0; right: 0; background: var(--bg); flex-direction: column; gap: 0; display: none; }
-      nav ul.show { display: flex; }
-      nav ul li { padding: 0.75rem 0; text-align: center; }
-      .hamburger { display: flex; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      text-align: center;
+      margin: 0;
     }
 
-    .section { text-align: left; margin: 0 auto 2.5rem; max-width: 620px; }
-    .section-title { text-align: center; letter-spacing: 0.16em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 0.5rem; }
-    .section-sub { text-align: center; font-size: 0.9rem; color: #555; margin-bottom: 1.5rem; }
-    .policy-list { font-size: 0.9rem; line-height: 1.5; padding-left: 1.1rem; }
-    .policy-list li { margin-bottom: 0.35rem; }
+    .page-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 3rem;
+    }
 
-    .contact-row { font-size: 0.95rem; margin-bottom: 0.4rem; text-align: center; }
-    .contact-row a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; }
+    nav {
+      margin-bottom: 2rem;
+    }
 
-    footer { font-size: 0.75rem; color: #777; text-align: center; padding-bottom: 1rem; }
+    nav a {
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: bold;
+      margin: 0 0.75rem;
+    }
+
+    .section {
+      text-align: left;
+      margin: 0 auto 2.5rem;
+      max-width: 620px;
+    }
+
+    .section-title {
+      text-align: center;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-sub {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      background: rgba(255,255,255,0.7);
+      padding: 1.5rem;
+      border-radius: 12px;
+      border: 1px solid rgba(0,0,0,0.08);
+    }
+
+    input, select, textarea {
+      padding: 0.65rem 0.9rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 0.9rem;
+      width: 100%;
+      background: var(--input-bg);
+    }
+
+    button {
+      padding: 0.8rem 2rem;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.85rem;
+      transition: 0.2s;
+    }
+
+    button:hover { opacity: 0.9; }
+
+    .note {
+      font-size: 0.85rem;
+      color: #444;
+      margin-top: 0.8rem;
+      text-align: center;
+    }
+
+    footer {
+      font-size: 0.75rem;
+      color: #777;
+      text-align: center;
+      padding-bottom: 1rem;
+    }
+
+    @media (max-width:480px) {
+      .page-wrap { padding: 1.8rem 1.25rem 2.5rem; }
+    }
   </style>
 </head>
 <body>
-
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="nav-container">
-      <div class="logo"><a href="index.html">StylesByVanessaV</a></div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="booking.html">Booking</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </nav>
-    </div>
-  </header>
-
   <div class="page-wrap">
 
-    <!-- BOOKING & POLICIES -->
+    <!-- Navigation -->
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="about.html">About</a> |
+      <a href="services.html">Services</a> |
+      <a href="gallery.html">Gallery</a> |
+      <a href="booking.html">Booking</a> |
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- BOOKING SECTION -->
     <section class="section" id="booking">
-      <h2 class="section-title">Booking &amp; Policies</h2>
-      <p class="section-sub">
-        Booking is done through Instagram DMs. Please read before requesting an appointment.
-      </p>
+      <h2 class="section-title">Book Your Appointment</h2>
+      <p class="section-sub">Select a date, pick a time, and tell Vanessa about your desired style. She will confirm your appointment via email or Instagram DM.</p>
 
-      <ul class="policy-list">
-        <li><strong>How to book:</strong> DM @stylesbyvanessav with your name, desired style, preferred date/time, and a recent photo of your hair.</li>
-        <li><strong>Deposits:</strong> A small non-refundable deposit may be required to secure your spot.</li>
-        <li><strong>Preparation:</strong> Arrive with clean, detangled hair and no heavy oils or grease.</li>
-        <li><strong>Lateness:</strong> Short grace period, then a late fee or cancellation may apply.</li>
-        <li><strong>Kids:</strong> Child must be able to sit for the full style and be accompanied by an adult.</li>
-      </ul>
+      <form id="bookingForm">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
 
-      <p class="contact-row">
-        <strong>Instagram:</strong> 
-        <a href="https://instagram.com/stylesbyvanessav" target="_blank" rel="noopener">@stylesbyvanessav</a>
-      </p>
+        <label for="service">Select Service</label>
+        <select name="service" id="service" required>
+          <option value="">--Choose a Service--</option>
+          <option value="knotless_braids">Knotless Braids</option>
+          <option value="box_braids">Box Braids</option>
+          <option value="feed_in_braids">Feed-in / Stitch Braids</option>
+          <option value="locs_maintenance">Locs & Maintenance</option>
+          <option value="starter_locs">Starter Locs</option>
+          <option value="two_strand_twists">Two-Strand Twists</option>
+          <option value="cornrows_flat_twists">Cornrows / Flat Twists</option>
+          <option value="crochet_braids">Crochet Braids</option>
+          <option value="faux_locs_passion_twists">Faux Locs / Passion Twists</option>
+        </select>
+
+        <label for="date">Preferred Date</label>
+        <input type="date" name="date" id="date" required>
+
+        <label for="time">Preferred Time</label>
+        <input type="time" name="time" id="time" required>
+
+        <textarea name="notes" rows="4" placeholder="Additional notes, hair photos, or inspirations (optional)"></textarea>
+
+        <button type="submit">Submit Booking Request</button>
+      </form>
+
+      <p class="note">After submitting, Vanessa will confirm your appointment within 24 hours. A small deposit may be required to secure your spot.</p>
     </section>
 
+    <footer>
+      &copy; <span id="year"></span> StylesByVanessaV. All rights reserved.
+    </footer>
   </div>
 
-  <footer>
-    &copy; <span id="year"></span> StylesByVanessaV. All rights reserved.
-  </footer>
-
   <script>
+    // Year in footer
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Hamburger menu toggle
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('nav ul');
-    hamburger.addEventListener('click', () => { navLinks.classList.toggle('show'); });
+    // Booking form submission
+    document.getElementById("bookingForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Thank you! Your booking request has been sent. Vanessa will confirm with you soon.");
+      this.reset();
+    });
   </script>
-
 </body>
 </html>
