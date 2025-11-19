@@ -17,23 +17,6 @@
 
   <title>StylesByVanessaV – Braids, Locs & Natural Hair (CT & NYC)</title>
 
-  <!-- Business Schema (SEO) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "HairSalon",
-    "name": "StylesByVanessaV",
-    "alternateName": "Styles by Vanessa V",
-    "url": "https://breannadalling0001-gif.github.io/stylesbyvanessav-website/",
-    "logo": "https://breannadalling0001-gif.github.io/stylesbyvanessav-website/F25DED8F-328C-43CE-A96B-E747DD95E1AD.png",
-    "image": "https://breannadalling0001-gif.github.io/stylesbyvanessav-website/F25DED8F-328C-43CE-A96B-E747DD95E1AD.png",
-    "description": "Professional braider and natural hair stylist specializing in knotless braids, locs, crochet styles, and protective styling. Clean parts, long-lasting results. Serving Bridgeport CT and surrounding areas, plus Queens and Valley Stream in NYC.",
-    "sameAs": [
-      "https://www.instagram.com/stylesbyvanessav/"
-    ]
-  }
-  </script>
-
   <style>
     :root {
       --bg: #f9f4ec;
@@ -41,11 +24,7 @@
       --accent: #111111;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       margin: 0;
@@ -55,60 +34,38 @@
       text-align: center;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    a { color: inherit; text-decoration: none; }
 
-    .page-wrap {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 2.5rem 1.5rem 3rem;
-    }
+    .page-wrap { max-width: 720px; margin: 0 auto; padding: 2.5rem 1.5rem 3rem; }
 
-    /* NAVIGATION BAR */
+    /* NAVIGATION */
     nav {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
+      text-align: center;
       margin-bottom: 2rem;
       font-weight: bold;
       text-transform: uppercase;
+      overflow-wrap: anywhere;
     }
 
     nav a {
       color: var(--accent);
-      padding: 0.5rem 1rem;
+      padding: 0.5rem 0.75rem;
       border-radius: 8px;
       transition: background 0.2s;
+      display: inline-block;
+      white-space: nowrap;
     }
 
-    nav a:hover {
-      background: rgba(0,0,0,0.05);
-    }
+    nav a:hover { background: rgba(0,0,0,0.05); }
+
+    nav span { color: var(--accent); margin: 0 0.25rem; }
 
     /* HERO */
-    .hero-logo {
-      width: 100%;
-      max-width: 380px;
-      height: auto;
-      margin: 0 auto 1.75rem;
-      display: block;
-    }
+    .hero-logo { width: 100%; max-width: 380px; height: auto; margin: 0 auto 1.75rem; display: block; }
 
-    .hero-title {
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      font-size: 1.6rem;
-      margin-bottom: 0.75rem;
-    }
+    .hero-title { letter-spacing: 0.18em; text-transform: uppercase; font-size: 1.6rem; margin-bottom: 0.75rem; }
 
-    .hero-text {
-      max-width: 420px;
-      margin: 0 auto 1.75rem;
-      font-size: 1rem;
-      line-height: 1.5;
-    }
+    .hero-text { max-width: 420px; margin: 0 auto 1.75rem; font-size: 1rem; line-height: 1.5; }
 
     .btn-primary {
       display: inline-block;
@@ -123,31 +80,14 @@
       margin-bottom: 2.5rem;
     }
 
-    .btn-primary:hover {
-      opacity: 0.9;
-    }
+    .btn-primary:hover { opacity: 0.9; }
 
     /* SECTIONS */
-    .section {
-      text-align: left;
-      margin: 0 auto 2.5rem;
-      max-width: 620px;
-    }
+    .section { text-align: left; margin: 0 auto 2.5rem; max-width: 620px; }
 
-    .section-title {
-      text-align: center;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      font-size: 0.95rem;
-      margin-bottom: 0.5rem;
-    }
+    .section-title { text-align: center; letter-spacing: 0.16em; text-transform: uppercase; font-size: 0.95rem; margin-bottom: 0.5rem; }
 
-    .section-sub {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #555;
-      margin-bottom: 1.5rem;
-    }
+    .section-sub { text-align: center; font-size: 0.9rem; color: #555; margin-bottom: 1.5rem; }
 
     .cards {
       display: grid;
@@ -170,168 +110,63 @@
       margin-bottom: 0.5rem;
     }
 
-    .card ul {
-      list-style: none;
-      padding-left: 0;
-      margin: 0;
-      font-size: 0.9rem;
-      line-height: 1.5;
-    }
+    .card ul { list-style: none; padding-left: 0; margin: 0; font-size: 0.9rem; line-height: 1.5; }
 
-    .card ul li::before {
-      content: "– ";
-    }
+    .card ul li::before { content: "– "; }
 
-    .note {
-      font-size: 0.85rem;
-      color: #444;
-      margin-top: 1rem;
-    }
-
-    footer {
-      font-size: 0.75rem;
-      color: #777;
-      text-align: center;
-      padding-bottom: 1rem;
-    }
+    footer { font-size: 0.75rem; color: #777; text-align: center; padding-bottom: 1rem; }
 
     /* GALLERY CAROUSEL */
-    .gallery-wrapper {
-      max-width: 420px;
-      margin: 0 auto 0;
-    }
+    .gallery-wrapper { max-width: 420px; margin: 0 auto 0; }
 
-    .carousel {
-      position: relative;
-      overflow: hidden;
-      border-radius: 16px;
-      background: rgba(255, 255, 255, 0.7);
-      border: 1px solid rgba(0, 0, 0, 0.06);
-    }
+    .carousel { position: relative; overflow: hidden; border-radius: 16px; background: rgba(255,255,255,0.7); border: 1px solid rgba(0,0,0,0.06); }
 
-    .carousel-track {
-      display: flex;
-      transition: transform 0.4s ease;
-    }
+    .carousel-track { display: flex; transition: transform 0.4s ease; }
 
-    .slide {
-      min-width: 100%;
-      padding: 0.75rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+    .slide { min-width: 100%; padding: 0.75rem; display: flex; justify-content: center; align-items: center; }
 
-    .slide img {
-      width: auto;
-      max-width: 100%;
-      height: auto;
-      max-height: 450px;
-      border-radius: 12px;
-      display: block;
-    }
+    .slide img { width: auto; max-width: 100%; height: auto; max-height: 450px; border-radius: 12px; display: block; }
 
-    .carousel-controls {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.4rem 0.75rem 0.65rem;
-      font-size: 0.78rem;
-    }
+    .carousel-controls { display: flex; justify-content: space-between; align-items: center; padding: 0.4rem 0.75rem 0.65rem; font-size: 0.78rem; }
 
-    .dots {
-      display: flex;
-      gap: 0.35rem;
-      align-items: center;
-    }
+    .dots { display: flex; gap: 0.35rem; align-items: center; }
 
-    .dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      border: 1px solid #444;
-      background: transparent;
-    }
+    .dot { width: 7px; height: 7px; border-radius: 50%; border: 1px solid #444; background: transparent; }
 
-    .dot.active {
-      background: #444;
-    }
+    .dot.active { background: #444; }
 
-    .arrow-btn {
-      border: none;
-      background: none;
-      font-size: 1rem;
-      padding: 0.15rem 0.4rem;
-      cursor: pointer;
-      color: #444;
-    }
+    .arrow-btn { border: none; background: none; font-size: 1rem; padding: 0.15rem 0.4rem; cursor: pointer; color: #444; }
 
-    .arrow-btn:disabled {
-      opacity: 0.3;
-      cursor: default;
-    }
+    .arrow-btn:disabled { opacity: 0.3; cursor: default; }
 
     /* BOOKING FORM */
-    .booking-form {
-      display: flex;
-      flex-direction: column;
-      gap: 0.8rem;
-      max-width: 400px;
-      margin: 0 auto;
-      background: rgba(255,255,255,0.85);
-      padding: 1rem 1.5rem;
-      border-radius: 12px;
-    }
+    .booking-form { display: flex; flex-direction: column; gap: 0.8rem; max-width: 400px; margin: 0 auto; background: rgba(255,255,255,0.85); padding: 1rem 1.5rem; border-radius: 12px; }
 
-    .booking-form label {
-      font-size: 0.9rem;
-      font-weight: bold;
-      margin-bottom: 0.2rem;
-    }
+    .booking-form label { font-size: 0.9rem; font-weight: bold; margin-bottom: 0.2rem; }
 
     .booking-form input, .booking-form select, .booking-form textarea {
-      padding: 0.5rem;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 0.9rem;
+      padding: 0.5rem; border-radius: 8px; border: 1px solid #ccc; font-size: 0.9rem;
     }
 
-    .booking-form button {
-      padding: 0.6rem;
-      border-radius: 999px;
-      border: none;
-      background: var(--accent);
-      color: #fff;
-      text-transform: uppercase;
-      cursor: pointer;
-      letter-spacing: 0.1em;
-      font-size: 0.85rem;
-    }
+    .booking-form button { padding: 0.6rem; border-radius: 999px; border: none; background: var(--accent); color: #fff; text-transform: uppercase; cursor: pointer; letter-spacing: 0.1em; font-size: 0.85rem; }
 
-    .booking-form button:hover {
-      opacity: 0.9;
-    }
+    .booking-form button:hover { opacity: 0.9; }
 
-    @media (max-width: 480px) {
-      .page-wrap {
-        padding: 1.8rem 1.25rem 2.5rem;
-      }
-    }
+    @media (max-width: 480px) { .page-wrap { padding: 1.8rem 1.25rem 2.5rem; } }
   </style>
 </head>
 <body>
   <div class="page-wrap">
 
     <!-- NAVIGATION -->
-  <nav>
-      <a href="index.html">Home</a> |
-      <a href="about.html">About</a> |
-      <a href="services.html">Services</a> |
-      <a href="gallery.html">Gallery</a> |
-      <a href="booking.html">Booking</a> |
+    <nav>
+      <a href="index.html">Home</a><span>|</span>
+      <a href="about.html">About</a><span>|</span>
+      <a href="services.html">Services</a><span>|</span>
+      <a href="gallery.html">Gallery</a><span>|</span>
+      <a href="booking.html">Booking</a><span>|</span>
       <a href="contact.html">Contact</a>
     </nav>
-
 
     <!-- HERO -->
     <img src="F25DED8F-328C-43CE-A96B-E747DD95E1AD.png" alt="StylesByVanessaV Logo" class="hero-logo" />
@@ -375,9 +210,7 @@
     <!-- SERVICES -->
     <section class="section" id="services">
       <h2 class="section-title">Services</h2>
-      <p class="section-sub">
-        Vanessa offers a variety of styles customized to each client. Final pricing depends on hair length, thickness, and style complexity.
-      </p>
+      <p class="section-sub">Vanessa offers a variety of styles customized to each client. Final pricing depends on hair length, thickness, and style complexity.</p>
       <div class="cards">
         <div class="card">
           <h3>Braids</h3>
@@ -413,7 +246,6 @@
     <section class="section" id="booking">
       <h2 class="section-title">Booking & Policies</h2>
       <p class="section-sub">Book your appointment easily using the form below or send a DM on Instagram.</p>
-
       <form class="booking-form" action="mailto:sheronrose3215@gmail.com" method="post" enctype="text/plain">
         <label for="name">Full Name</label>
         <input type="text" id="name" name="name" required>
